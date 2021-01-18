@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.testautomationguru.container.pages.SearchPage;
+import com.testautomationguru.container.pages.Test1;
 
 
 import org.openqa.selenium.WebDriver;
@@ -31,12 +31,12 @@ import java.net.URL;
 
 public class Test1 extends BaseTest {
 
-    private SearchPage google;
+    private Test1 google;
 
     @BeforeTest
     public void setUp() throws MalformedURLException {
         super.setUp();
-        google = new SearchPage(driver);
+        google = new Test1(driver);
     }
 	
 public void chromeTest() throws Exception {
