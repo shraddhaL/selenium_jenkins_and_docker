@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-public class Test2 {
+public class Test2Page {
     
     private WebDriver driver;
     private WebDriverWait wait;
@@ -24,7 +24,7 @@ public class Test2 {
               .perform();
     };
     
-    public Test2(final WebDriver driver) {
+    public Test2Page(final WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
         this.wait = new WebDriverWait(driver, 30);
