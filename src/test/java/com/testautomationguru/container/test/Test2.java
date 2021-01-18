@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.testautomationguru.container.pages.OrderPage;
+import com.testautomationguru.container.pages.Test2Page;
 
 
 import org.openqa.selenium.WebDriver;
@@ -23,12 +23,12 @@ import java.net.URL;
 
 public class Test2 extends BaseTest{
 
-    private OrderPage store;
+    private Test2Page store;
 
     @BeforeTest
     public void setUp() throws MalformedURLException {
         super.setUp();
-        store = new OrderPage(driver);
+        store = new Test2Page(driver);
     }
  
 public void chromeTest() throws Exception {
