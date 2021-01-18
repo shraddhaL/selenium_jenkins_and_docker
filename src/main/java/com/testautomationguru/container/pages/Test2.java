@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-public class OrderPage {
+public class Test2 {
     
     private WebDriver driver;
     private WebDriverWait wait;
