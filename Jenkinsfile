@@ -2,7 +2,11 @@ pipeline {
      agent any
 	 tools {
         maven 'Maven' 
-	
+    }
+	 environment {
+        containerName = "shraddhal/seleniumtest"
+        container_version = "1.0.0.${BUILD_ID}"
+        dockerTag = "${containerName}:${container_version}"
     }
     stages { 	
         stage('Build Jar') {
