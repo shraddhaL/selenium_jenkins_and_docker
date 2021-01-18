@@ -27,12 +27,6 @@ public class Test1 {
     @FindBy(id = "foot")
     private WebElement footer;
 
-    public SearchPage(final WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-        this.wait = new WebDriverWait(driver, 30);
-    }
-
     public void goTo() {
         this.driver.get("https://www.google.com");
         System.out.println("Browser launched and navigated to Google");
