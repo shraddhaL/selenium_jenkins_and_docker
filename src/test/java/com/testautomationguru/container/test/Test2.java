@@ -30,7 +30,24 @@ public class OrderTest extends BaseTest{
         super.setUp();
         store = new OrderPage(driver);
     }
-  driver.get("http:localhost:9090/roshambo");
-    Assert.assertEquals(driver.getTitle(), "Rock Paper .Scissors!!!");
+ 
+public void chromeTest() throws Exception {
+        URL url = new URL("http://localhost:4444/wd/hub");
 
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--window-size=1280,1024");
+
+        DesiredCapabilities desiredCapabilities = DesiredCapabilities.chrome();
+        desiredCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+        WebDriver driver = new RemoteWebDriver(url, desiredCapabilities);
+
+        driver.get("http:localhost:9090/roshambo");
+
+        // 10 seconds to check inside the container via vnc
+        Thread.sleep(1000 * 10);
+
+        Assert.assertEquals(driver.getTitle(), "Rock Paper .Scissors!!!");
+
+        driver.quit();
+    }
 }
