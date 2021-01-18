@@ -24,7 +24,7 @@ public class Test2 {
               .perform();
     };
     
-    public OrderPage(final WebDriver driver) {
+    public Test2(final WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
         this.wait = new WebDriverWait(driver, 30);
