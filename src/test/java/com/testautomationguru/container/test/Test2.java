@@ -30,7 +30,7 @@ public class OrderTest extends BaseTest{
         super.setUp();
         store = new OrderPage(driver);
     }
-
+  driver.get("http:localhost:9090");
     Assert.assertEquals(driver.getTitle(), "Rock Paper .Scissors!!!");
 
 }
