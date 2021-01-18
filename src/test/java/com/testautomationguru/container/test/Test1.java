@@ -29,7 +29,7 @@ import org.testng.annotations.Test;
 
 import java.net.URL;
 
-public class SearchTest extends BaseTest {
+public class Test1 extends BaseTest {
 
     private SearchPage google;
 
