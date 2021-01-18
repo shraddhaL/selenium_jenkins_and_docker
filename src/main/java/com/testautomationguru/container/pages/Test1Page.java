@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Test1 {
+public class Test1Page {
 
     private final WebDriver driver;
     private final WebDriverWait wait;
@@ -27,7 +27,7 @@ public class Test1 {
     @FindBy(id = "foot")
     private WebElement footer;
 
-    public Test1(final WebDriver driver) {
+    public Test1Page(final WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
         this.wait = new WebDriverWait(driver, 30);
