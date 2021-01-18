@@ -21,7 +21,7 @@ import org.testng.annotations.Test;
 
 import java.net.URL;
 
-public class OrderTest extends BaseTest{
+public class Test2 extends BaseTest{
 
     private OrderPage store;
 
