@@ -1,3 +1,4 @@
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -7,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 import java.time.Duration;
 
-public class Test1 {
+public class Test1Page {
 
     public static void main(String[] args) {
         WebDriver driver = new FirefoxDriver();
@@ -23,7 +24,6 @@ public class Test1 {
     }
 }
   
-
 
 /*package com.testautomationguru.container.pages;
 
