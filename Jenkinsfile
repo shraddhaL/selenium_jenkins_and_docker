@@ -24,7 +24,9 @@ pipeline {
         stage('Push Image') {
             steps {
                 script {
-			                docker.withRegistry('https://hub.docker.com', 'shraddhal/seleniumtest') {
+			               withCredentials([usernamePassword( credentialsId: 'docker-hub-credentials', usernameVariable: 'shraddhal', passwordVariable: 'dockerhub1234')]) {
+					
+			docker.withRegistry('https://hub.docker.com', 'shraddhal/seleniumtest') {
 					sh "docker login -u ${USERNAME} -p ${PASSWORD}"
 					app.push("${BUILD_NUMBER}")
 					app.push("latest")
