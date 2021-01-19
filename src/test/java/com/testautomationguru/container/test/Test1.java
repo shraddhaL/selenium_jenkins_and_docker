@@ -49,7 +49,7 @@ public void chromeTest() throws Exception {
         desiredCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
         WebDriver driver = new RemoteWebDriver(url, desiredCapabilities);
 
-        driver.get("http:localhost:9090/roshambo");
+        driver.get("http://localhost:9090/roshambo");
 
         // 10 seconds to check inside the container via vnc
         Thread.sleep(1000 * 10);
