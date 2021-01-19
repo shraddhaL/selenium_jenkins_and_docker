@@ -24,13 +24,13 @@ pipeline {
         stage('Push Image') {
             steps {
                 script {
-			          //    withCredentials([usernamePassword( credentialsId: 'docker-hub-credentials', usernameVariable: 'shraddhal', passwordVariable: 'dockerhub1234')]) {
+			     withCredentials([usernamePassword( credentialsId: 'docker-hub-credentials', usernameVariable: 'shraddhal', passwordVariable: 'dockerhub1234')]) {
 					
-			docker.withRegistry('https://registry.hub.docker.com', 'shraddhal/dockerhub1234') {
+			docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
 					sh "docker login -u shraddhal -p dockerhub1234"
 					app.push("${BUILD_NUMBER}")
 					app.push("latest")
-				//	}
+				}
 			
 			
 			
