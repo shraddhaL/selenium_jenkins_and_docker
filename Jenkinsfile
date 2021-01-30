@@ -27,7 +27,7 @@ pipeline {
 			     withCredentials([usernamePassword( credentialsId: 'fbdfdaaf-e9a6-4f7f-b3f3-c3ab0ce43636', usernameVariable: 'shraddhal', passwordVariable: '')]) {
 					
 			docker.withRegistry('https://registry.hub.docker.com', 'fbdfdaaf-e9a6-4f7f-b3f3-c3ab0ce43636') {
-					sh "docker login -u shraddhal -p dockerhub1234"
+					sh "docker login -u shraddhal -p "
 					app.push("${BUILD_NUMBER}")
 					app.push("latest")
 				}
